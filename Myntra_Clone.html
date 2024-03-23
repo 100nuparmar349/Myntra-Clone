@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            justify-content: center;
+        }
+        header{
+            z-index: 999;
+            display: flex;
+            position: fixed;
+            width: 100vw;
+            background-color:#ffff;
+     height: 80px;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #e1e1e1;
+        }
+        .logo img{
+            width: 40px;
+
+        }
+        .logo img p{
+            font-size: 3px;
+        }
+        .nav_bar{
+            display:flex;
+            list-style: none;
+           
+            margin: 5px ;
+            padding: 5px ;
+            width: 50%;
+            
+            
+
+            
+        }
+      
+
+      /*  Add because we want border of the bottom of the anchor tag*/
+       
+        .nav_bar li a{
+            position: relative;
+           
+            float: left;
+           
+            align-items: center;
+            color: #282c3f;
+            text-align: center;
+            border-bottom: none;
+            font-weight: 600;
+            padding: 30px;
+            text-transform: uppercase;
+         
+          
+           
+        }
+        @keyframes move {
+            0% {
+                border-color: transparent transparent red transparent;
+            }
+            
+            100% {
+                border-color: transparent transparent blue transparent;
+            }
+        }
+        
+        .nav_bar li a {
+            position: relative;
+            padding: 30px;
+            border-bottom: 4px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+        
+        .nav_bar li a:hover {
+            
+            padding-bottom: 26px;
+            animation: move 0.3s ease; /* Apply animation */
+        }
+        
+        
+       
+        
+        .container{
+            position: absolute;
+            top: 10%;
+            width: 100vw;
+            
+
+           
+           
+        }
+        .banner_container{
+     width: 100vw;
+
+        }
+        .img{
+            display: flex;
+            justify-items: center;
+        }
+        .img img{
+            width: 100%;
+            background-size: contain;
+            padding: 0;
+            
+            margin: 0;
+        }
+        a{
+            text-decoration: none;
+        }
+        .nav_bar li a span sup{
+            color: red;
+        }
+        @media screen and (max-width:1250px) {
+            .nav_bar {
+                display: inline-flex;
+                
+              /* Adjust width as needed */
+              
+            }
+            .nav_bar li{
+
+            }
+            .nav_bar li a {
+                padding: 5px; /* Adjust margin-right as needed */
+            }
+        }
+        .search_bar{
+            position: relative;
+            top: 5px;
+            
+            margin-left: 1px;
+            height: 50px;
+            width: 20%;
+           
+            
+        }
+        .search_bar input{
+            border-radius: 100px;
+            width: 100%;
+            height: 100%;
+            border: none;
+            font-size: 18px;
+            color: #696e79;
+            background: #f5f5f6;
+            padding-left: 40px;
+            outline: none;
+        }
+        .action_container{
+            display: flex;
+            justify-content: space-between;
+        }
+        .search_bar .search_icon{
+            position: absolute;
+            left: 10px;
+            top:12px ;
+            color: #282c3f;
+
+
+        }
+
+
+        .search_input:active{
+            border:active;
+        }
+        .search_bar>input.search_input:hover{
+            border: 2px solid cyan;
+        }
+
+        .action_bar{
+          
+            height: auto;
+            display: inline-flex;
+            min-width: 24%;
+            align-items: end;
+            margin-right: 10px;
+            padding-right: 10px;
+           justify-content:space-evenly;
+         
+            
+            
+         
+        }
+        
+        .action_container{
+            display: flex;
+            height: auto;
+            flex-wrap: wrap;
+            font-weight: 400;
+            justify-content: space-evenly;
+         
+            align-items: end;
+            margin-top: 10px;
+            margin-left: 20px;
+            
+        
+        }
+        /*banner container*/
+        
+        .index{
+   
+   
+    
+            border: 2px solid rgb(250, 250, 250);
+            justify-content: center;
+        
+            padding: 3px;
+            
+        
+            height: auto;
+            width: 100%;
+            
+        }
+        .image_container{
+            display: flex;
+            
+            box-shadow: 2px solid black;
+
+            width: 100vw;
+
+        }
+
+        
+  
+.index{
+    
+    border: 2px solid rgb(250, 250, 250);
+    justify-content: center;
+
+    padding: 3px;
+    
+
+    height: auto;
+    width: 100vw;
+    
+    
+}     
+        
+
+.collection{
+    display: flex;
+}
+.collection a img{
+    width: 100%;
+}
+
+
+.ads{
+    width: 100vw;
+}
+.ads img{
+    width: 100%;
+}
+
+
+footer{
+    position: absolute;
+    bottom: -180%;
+  
+    width: 100vw;
+    height: 40px;
+}
+
+
+footer{
+    background-color: #FAFBFC;
+}
+.footer-container{
+    padding: 30px 0px 40px 0px;
+   
+    display: flex;
+
+    float: left;
+   
+    margin-top:10px;
+    margin-left: 70px;
+    
+}
+.footer-column{
+    padding: 0px 20px 0px 0px;
+    display: inline-block;
+}
+.ShopLinks{
+    
+    width: 155px;
+    display: inline-block;
+    vertical-align: top;
+    padding-right: 20px;
+}
+.desktop-footerContainer {
+   
+    max-width: 1080px;
+    margin: auto;
+    min-width: 980px;
+}
+.desktop-genericInfo {
+    overflow: hidden;
+    margin-bottom: 24px;
+    margin-left: 60px;
+}
+.desktop-shopLinks {
+    float: left;
+    width: 155px;
+    display: inline-block;
+    vertical-align: top;
+    padding-right: 20px;
+}
+.desktop-shopLinks>p {
+    font-weight: 700;
+}
+.desktop-gInfoTitle, .desktop-or {
+    font-size: 12px;
+}
+.desktop-customerPolicies>a, .desktop-shopLinks>a {
+    color: #696b79;
+    display: block;
+    font-size: 15px;
+    text-decoration: none;
+    padding-bottom: 5px;
+    cursor: pointer;
+    line-height: normal;
+}
+.desktop-customerPolicies>a:nth-child(2), .desktop-shopLinks>a:nth-child(10), .desktop-shopLinks>a:nth-child(2) {
+    padding-top: 14px;
+}
+.desktop-shopLinks>p:nth-child(9) {
+    margin-top: 19px;
+}
+.desktop-shopLinks>p {
+    font-weight: 700;
+}
+.desktop-gInfoTitle, .desktop-or {
+    font-size: 12px;
+}
+.desktop-customerPolicies {
+    width: 15%;
+    float: left;
+}
+.desktop-appExperience {
+    display: inline-block;
+    vertical-align: top;
+    padding-right: 20px;
+    width: 360px;
+    font-size: 15px;
+    line-height: 19px;
+    float: left;
+    padding-top: 13px;
+}
+.desktop-promises {
+    width: 250px;
+    float: left;
+}
+.desktop-appExperience>p:first-child {
+    font-weight: 700;
+    color: #282c3f;
+    margin: -3px 0 0;
+    padding: 0 0 25px;
+}
+.desktop-downLinkContainer {
+    display: inline-block;
+   
+}
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+.desktop-androidDownLink, .desktop-iOSDownLink {
+    margin-right: 10px;
+    height: 42px;
+}
+.desktop-appExperience {
+    display: inline-block;
+    vertical-align: top;
+    padding-right: 20px;
+    width: 360px;
+    font-size: 15px;
+    line-height: 19px;
+    float: left;
+    padding-top: 13px;
+}
+.desktop-keepInTouch {
+    font-size: 12px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+.desktop-facebook, .desktop-instagram, .desktop-twitter, .desktop-youtube {
+    margin: 0 15px 0 0;
+    display: inline-block;
+}
+.desktop-facebook {
+    width: 20px;
+    height: 21px;
+}
+a {
+    text-decoration: none;
+    color: #282c3f;
+}
+
+p{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.footer-column h3{
+    margin-top:12px;
+    color: #282c3f;
+    margin-bottom: 25px;
+    font-size: 14px;
+
+
+}
+
+.footer-column a{
+    font-size: 15px;
+    color: #696B79;
+    padding-bottom:5px ;
+    text-decoration: none;
+}
+.second-column{
+    margin-left: 20px;
+}
+.appexperience{
+  
+    display: inline-block;
+    width: 360px;
+    padding-top:13px ;
+}
+.download-link{
+    display: inline-flex;
+    margin-top: 20px;
+
+
+}
+
+
+.andriod-link{
+    margin-right: 10px;
+    height: 42px;
+}
+
+.ios-link{
+    height: 42px;
+    margin-right: 10px;
+}
+.tittle{
+    font-weight:700;
+    color: #282c3f;
+    margin: -3px 0 0;
+    padding: 0 0 25px;
+}
+.keepIntouch{
+  
+
+    font-size: 12px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+.facebook, .youtube , .instagram{
+    display: inline-block;
+    margin: 0px 15px 0px 0px;
+
+}
+.facebook{
+    width: 20px;
+    height: 21px;
+}
+
+.promises{
+    width: 250px;
+    float: left;
+
+  
+}
+.section{
+    margin: 15px 0 30px;
+    color: #696b79;
+}
+        
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="#"
+            ><img class="myntra" src="images/myntra.png" alt="Myntra"
+          /> <p>Myntra.in</p> </a>
+        </div>
+         <div class="nav_bar">
+         
+                
+            <li> <a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li> <a href="#">Kids</a></li>
+            <li>  <a href="#">Home & living</a></li>
+            <li><a href="#">Men</a></li>
+            <li>  <a href="#">Studio <span><sup>New</sup></span></a></li>
+    
+
+  
+   
+   
+
+</div>
+       
+
+        <!-- Search bar container -->
+        <div class="search_bar">
+            <span class="material-symbols-outlined search_icon">
+                search
+                </span> 
+            <input type="text" class="search_input" 
+            placeholder="Search for products, brands and more">
+        </div>
+
+        <div class="action_bar">
+            <div class="action_container">
+                <span class="material-symbols-outlined action_icon"> person </span>
+                <span class="action_name">Profile<span>
+    
+                </div>
+    
+                <div class="action_container">
+                    <span class="material-symbols-outlined">
+                        shopping_cart
+                        </span>
+                        <span class="action_name">Wishlist<span>
+    
+                  
+                </div>
+    
+                   <div class="action_container">
+                    <span class="material-symbols-outlined">
+                        shopping_bag
+                        </span>
+                    <span class="action_name">Bag<span>
+        
+                </div>
+                
+    
+           
+          </div>
+
+        </div>
+
+    </header>
+
+    <div class="Bigcontainer">
+        <main>
+            <div class="container">
+                <div class="index_container">
+                    <div class="head"> <img src="images/head.webp" width="100%" alt=""></div>
+                   
+                </div>
+                <div class="banner_container">
+                    <div class="img"> 
+                        <div class="boy"> <img src="images/boy.webp" id="boys" class="banner_image" alt=""  ></div>
+                    <div class="girl"> <img src="images/girl.jpg"  class="banner_image" alt=""></div>
+               </div>
+                   
+                  
+              </div>
+    
+              <div class="index">
+                <img src="images/show.webp" alt="image not found" width="100%" >
+                </div>
+    
+    
+                <div class="image_container">
+                    <div  class="collection">
+                        <a href="#"> <img src="images/image1.webp" alt="image not found"></a>
+                        <a href=""> <img src="images/image2.jpg" alt=""></a>
+                        <a href="#"><img src="images/image3.jpg" alt=""></a>
+                        <a href=""> <img src="images/image4.jpg" alt=""></a>
+                        <a href=""> <img src="images/image5.png" alt=""></a>
+                        <a href=""> <img src="images/image6.webp" alt=""></a>     
+                        
+                      </div>
+                    
+    
+                </div>
+    
+    
+                
+           <div class="image_container">
+            <div class="collection">
+              <a href="#"> <img src="images/image7.jpg" alt="image not found"></a>
+              <a href=""> <img src="images/image8.png" alt=""></a>
+              <a href="#"><img src="images/image9.webp" alt=""></a>
+              <a href=""> <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/2/5/6f731a3e-f956-4b08-aa69-124df1fc01d11707130587155-Shop-By-Category_HP_12.jpg" alt=""></a>
+              <a href=""> <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/2/5/13e0b31a-061e-4833-90dc-1b074fb9912a1707130586996-Shop-By-Category_HP_13.jpg" alt=""></a>
+              <a href=""> <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/2/5/488ee4ac-d93c-49f7-90b1-fd6d9e51fd241707130587207-Shop-By-Category_HP_11.jpg" alt=""></a>
+      
+            </div>
+           
+          </div>
+          
+          <div class="image_container">
+    
+            <div class="collection">
+              <a href="#"> <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/2/5/20699307-7146-4727-934c-efdec665be1a1707130587050-Shop-By-Category_HP_14.jpg" alt="image not found"></a>
+              <a href=""> <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/2/5/4a56200d-00eb-4518-8982-a509f5d2d6a01707130586902-Shop-By-Category_HP_15.jpg" alt=""></a>
+              <a href="#"><img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/2/5/4dc942c3-7c4f-41a6-a62f-85b7cd1dc04f1707130587169-Shop-By-Category_HP_16.jpg" alt=""></a>
+              <a href=""> <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/2/5/3ebcb778-d39a-4b41-be89-b6a6ce4931161707130586820-Shop-By-Category_HP_17.jpg" alt=""></a>
+              <a href=""> <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/2/5/a8db1e87-c2f9-4122-bfd1-878da26b12a91707130587234-Shop-By-Category_HP_18.jpg" alt=""></a>
+              <a href=""> <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2024/2/5/13bae2c0-820f-4122-8dfd-70e4321326781707130586834-Shop-By-Category_HP_19.jpg" alt=""></a>     
+    
+    
+            </div>
+          
+              
+          
+         </div>
+    
+         <div class="ads">
+            <aside><img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2024/2/1/9eb6dcc4-a508-47ce-a6c4-dcfab0c991821706788570836-App-Install-Banner-----3.jpg" alt="" width="868px" height="168px"></aside>
+           </div>
+                    
+                  
+                  
+            </div>
+    
+    
+          
+    
+        </main>
+    
+    
+       <footer>
+        <div>
+            <div class="desktop-genericInfo">
+              
+                <div class="desktop-shopLinks" data-reactid="6"><p class="desktop-gInfoTitle" data-reactid="7"><a href="/?src=onlineShopping" data-reactid="8"> ONLINE SHOPPING </a></p><a href="/shop/men" data-reactid="9"><!-- react-text: 10 --> <!-- /react-text --><!-- react-text: 11 -->Men<!-- /react-text --><!-- react-text: 12 --> <!-- /react-text --></a><a href="/shop/women" data-reactid="13"><!-- react-text: 14 --> <!-- /react-text --><!-- react-text: 15 -->Women<!-- /react-text --><!-- react-text: 16 --> <!-- /react-text --></a><a href="/shop/kids" data-reactid="17"><!-- react-text: 18 --> <!-- /react-text --><!-- react-text: 19 -->Kids<!-- /react-text --><!-- react-text: 20 --> <!-- /react-text --></a><a href="/shop/home-living" data-reactid="21"><!-- react-text: 22 --> <!-- /react-text --><!-- react-text: 23 -->Home &amp; Living<!-- /react-text --><!-- react-text: 24 --> <!-- /react-text --></a><a href="/personal-care" data-reactid="25"><!-- react-text: 26 --> <!-- /react-text --><!-- react-text: 27 -->Beauty<!-- /react-text --><!-- react-text: 28 --> <!-- /react-text --></a><a href="/giftcard" data-reactid="29">Gift Cards</a><a href="/myntrainsider?cache=false" data-reactid="30">Myntra Insider</a><p class="desktop-gInfoTitle" data-reactid="31"> USEFUL LINKS </p><a data-refreshpage="true" href="http://blog.myntra.com/" data-reactid="32"><!-- react-text: 33 --> <!-- /react-text --><!-- react-text: 34 -->Blog<!-- /react-text --><!-- react-text: 35 --> <!-- /react-text --></a><a data-refreshpage="true" href="https://careers.myntra.com" data-reactid="36"><!-- react-text: 37 --> <!-- /react-text --><!-- react-text: 38 -->Careers<!-- /react-text --><!-- react-text: 39 --> <!-- /react-text --></a><a data-refreshpage="true" href="/sitemap" data-reactid="40"><!-- react-text: 41 --> <!-- /react-text --><!-- react-text: 42 -->Site Map<!-- /react-text --><!-- react-text: 43 --> <!-- /react-text --></a><a data-refreshpage="true" href="/corp-info" data-reactid="44"><!-- react-text: 45 --> <!-- /react-text --><!-- react-text: 46 -->Corporate Information<!-- /react-text --><!-- react-text: 47 --> <!-- /react-text --></a><a data-refreshpage="true" href="/security/whitehat" data-reactid="48"><!-- react-text: 49 --> <!-- /react-text --><!-- react-text: 50 -->Whitehat<!-- /react-text --><!-- react-text: 51 --> <!-- /react-text --></a><a data-refreshpage="true" href="https://www.cleartrip.com/" data-reactid="52"><!-- react-text: 53 --> <!-- /react-text --><!-- react-text: 54 -->Cleartrip<!-- /react-text --><!-- react-text: 55 --> <!-- /react-text --></a></div>
+    
+    
+    
+             <div class="desktop-customerPolicies" data-reactid="56"><p class="desktop-gInfoTitle" data-reactid="57"> CUSTOMER POLICIES </p><a data-refreshpage="true" href="/contactus" data-reactid="58"><!-- react-text: 59 --> <!-- /react-text --><!-- react-text: 60 -->Contact Us<!-- /react-text --><!-- react-text: 61 --> <!-- /react-text --></a><a data-refreshpage="true" href="/faqs" data-reactid="62"><!-- react-text: 63 --> <!-- /react-text --><!-- react-text: 64 -->FAQ<!-- /react-text --><!-- react-text: 65 --> <!-- /react-text --></a><a data-refreshpage="true" href="/tac" data-reactid="66"><!-- react-text: 67 --> <!-- /react-text --><!-- react-text: 68 -->T&amp;C<!-- /react-text --><!-- react-text: 69 --> <!-- /react-text --></a><a data-refreshpage="true" href="/termsofuse" data-reactid="70"><!-- react-text: 71 --> <!-- /react-text --><!-- react-text: 72 -->Terms Of Use<!-- /react-text --><!-- react-text: 73 --> <!-- /react-text --></a><a data-refreshpage="true" href="/my/orders" data-reactid="74"><!-- react-text: 75 --> <!-- /react-text --><!-- react-text: 76 -->Track Orders<!-- /react-text --><!-- react-text: 77 --> <!-- /react-text --></a><a data-refreshpage="true" href="/faqs#shipping" data-reactid="78"><!-- react-text: 79 --> <!-- /react-text --><!-- react-text: 80 -->Shipping<!-- /react-text --><!-- react-text: 81 --> <!-- /react-text --></a><a data-refreshpage="true" href="/faqs#cancel" data-reactid="82"><!-- react-text: 83 --> <!-- /react-text --><!-- react-text: 84 -->Cancellation<!-- /react-text --><!-- react-text: 85 --> <!-- /react-text --></a><a data-refreshpage="true" href="/faqs#returns" data-reactid="86"><!-- react-text: 87 --> <!-- /react-text --><!-- react-text: 88 -->Returns<!-- /react-text --><!-- react-text: 89 --> <!-- /react-text --></a><a data-refreshpage="true" href="/privacypolicy" data-reactid="90"><!-- react-text: 91 --> <!-- /react-text --><!-- react-text: 92 -->Privacy policy<!-- /react-text --><!-- react-text: 93 --> <!-- /react-text --></a><a data-refreshpage="true" href="/termsofuse#23.%20Grievance%20Officer" data-reactid="94"><!-- react-text: 95 --> <!-- /react-text --><!-- react-text: 96 -->Grievance Officer<!-- /react-text --><!-- react-text: 97 --> <!-- /react-text --></a></div>
+    
+    
+             <div class="desktop-appExperience" data-reactid="98"><p class="desktop-gInfoTitle" data-reactid="99"> EXPERIENCE MYNTRA APP ON MOBILE </p><div class="desktop-downLinkContainer" data-reactid="100"><a href="https://play.google.com/store/apps/details?id=com.myntra.android" data-reactid="101"><img class="desktop-androidDownLink" src="https://constant.myntassets.com/web/assets/img/80cc455a-92d2-4b5c-a038-7da0d92af33f1539674178924-google_play.png"></a><a href="https://itunes.apple.com/in/app/myntra-indias-fashion-store/id907394059" data-reactid="103"><img class="desktop-iOSDownLink" src="https://constant.myntassets.com/web/assets/img/bc5e11ad-0250-420a-ac71-115a57ca35d51539674178941-apple_store.png"></a></div><div class="desktop-keepInTouch" data-reactid="105"> KEEP IN TOUCH </div><a href="https://www.facebook.com/myntra" class="desktop-facebook" data-reactid="106"><img src="https://constant.myntassets.com/web/assets/img/d2bec182-bef5-4fab-ade0-034d21ec82e31574604275433-fb.png" style="width: 20px; height: 20px;"></a><a href="https://twitter.com/myntra" class="desktop-twitter" data-reactid="108"><img src="https://constant.myntassets.com/web/assets/img/f10bc513-c5a4-490c-9a9c-eb7a3cc8252b1574604275383-twitter.png" style="width: 20px; height: 20px;"></a><a href="https://www.youtube.com/user/myntradotcom" class="desktop-youtube" data-reactid="110"><img src="https://constant.myntassets.com/web/assets/img/a7e3c86e-566a-44a6-a733-179389dd87111574604275355-yt.png" style="width: 28px; height: 20px;"></a><a href="https://www.instagram.com/myntra" class="desktop-instagram" data-reactid="112"><img src="https://constant.myntassets.com/web/assets/img/b4fcca19-5fc1-4199-93ca-4cae3210ef7f1574604275408-insta.png" style="width: 20px; height: 22px; position: relative; top: 1px;"></a></div>
+    
+    
+             <div class="desktop-promises" data-reactid="114"><div class="desktop-section" data-reactid="115"><div class="desktop-original" data-reactid="116"><img src="https://constant.myntassets.com/web/assets/img/6c3306ca-1efa-4a27-8769-3b69d16948741574602902452-original.png" style="width: 48px; height: 40px;"></div><div data-reactid="118"><strong data-reactid="119">100% ORIGINAL </strong><!-- react-text: 120 --> guarantee for all products at myntra.com <!-- /react-text --></div></div><div class="desktop-section" data-reactid="121"><div class="desktop-return" data-reactid="122"><img src="https://assets.myntassets.com/assets/images/retaillabs/2023/5/22/becb1b16-86cc-4e78-bdc7-7801c17947831684737106127-Return-Window-image.png" style="width: 48px; height: 49px;"></div><div data-reactid="124"><strong data-reactid="125">Return within 14days </strong><!-- react-text: 126 -->of receiving your order<!-- /react-text --></div></div></div>
+             
+              <div class="desktop-promises"></div>
+            </div>
+            <div class="desktop-popularSearch"></div>
+            <div class="desktop-fInfoSection"></div>
+            <address class="index-lcContainer"></address>
+            <div class="desktop-gyanContainer"></div>
+          </div>
+       </footer>
+     
+
+    </div>
+
+   
+   
+   
+   
+    
+</body>
+</html>
